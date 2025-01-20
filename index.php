@@ -36,6 +36,31 @@
 
 
 <?php
+
+// phpinfo();
+
+
+require 'env.php'; // Path to the helper function
+
+// Load the .env file
+loadEnv();
+
+// Get the database path from the .env file
+$dbPath = $_ENV['database_path'] ?? null;
+
+if (!$dbPath) {
+    die("Database path not set in .env file.");
+}
+
+// Connect to the SQLite database
+try {
+    $db = new PDO('sqlite:' . $dbPath);
+    echo "Connected to SQLite database successfully!";
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+
+
 require_once "BoxCalculator.php";
 
 // Handle the form submission
