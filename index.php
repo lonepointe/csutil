@@ -226,7 +226,7 @@ try {
 </html>
 
 <?php /*
-<!--  from chatGPT I need to figure out how to put this shit in there to make it delete with confirmation.
+<!--  stuff I gotta figure out, I don't know javascript really.
 <button onclick="confirmDelete(1)">Delete Item 1</button>
 function deleteRow(PDO $db, $lineID) {
     if ($lineID !== null) {
